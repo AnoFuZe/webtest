@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Image Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="card text-center mt-5">
+            <div class="card-header bg-primary text-white">
+                <h1>Text to Image Generator</h1>
+            </div>
+            <div class="card-body">
+                <form id="textForm">
+                    <div class="form-group">
+                        <input type="text" id="prompt" name="prompt" class="form-control" placeholder="Enter your text" required>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-lg">Generate Image</button>
+                </form>
+            </div>
+            <div class="card-footer">
+                <div id="result" class="mt-3 d-none">
+                    <img id="generatedImage" class="generated-image img-fluid mb-3" alt="Generated Image">
+                    <a id="downloadBtn" class="btn btn-secondary btn-lg download-btn" href="#" download>Download Image</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
+
