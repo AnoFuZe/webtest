@@ -1,0 +1,6 @@
+torch
+diffusers
+transformers
+scipy
+ftfy
+accelerate
